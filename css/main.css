@@ -1985,6 +1985,10 @@ select {
   padding: 10px;
 }
 
+.shop-card__button:disabled.btn {
+  background-color: #5d6c7b;
+}
+
 .button {
   display: -webkit-box;
   display: -ms-flexbox;
