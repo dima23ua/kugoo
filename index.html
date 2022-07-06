@@ -6,8 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/files/favicon.ico" rel="icon" type="image/x-icon" />
-	<link rel="stylesheet" href="css/main.min.css?_v=20220702232904">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20220702232904" />
+	<link rel="stylesheet" href="css/main.min.css?_v=20220706223115">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20220706223115" />
 	<title>Kugoo - Главная страница</title>
 </head>
 
@@ -69,9 +69,9 @@
 				</div>
 
 				<div class="header-top-phone" id="header-top-phone">
-					<div class="header-top-phone__number ">
-						<div class="header-top-phone__number-item" type="tel:+380965055461">+38 (096) 505-54-61</div>
-						<div class="header-top-phone__number-img click-title" data-path="phones">
+					<div class="header-top-phone__number click">
+						<a class="header-top-phone__number-item" href="tel:+380965055461">+38 (096) 505-54-61</a>
+						<div data-path="phones" class="header-top-phone__number-img click-title">
 							<svg class="sign-svg">
 								<use xlink:href="img/sprite.svg#sign"></use>
 							</svg>
@@ -81,16 +81,16 @@
 					<div data-target="phones" class="header-top-phone__list-phone click-content">
 						<div class="header-top-phone__list-phone-item">
 							<div class="header-top-phone__list-phone-title">Сервисный центр</div>
-							<div class="header-top-phone__list-phone-number">+38 (096) 350 76 92</div>
+							<a class="header-top-phone__list-phone-number" href="tel:+380963507692">+38 (096) 350 76 92</a>
 						</div>
 						<div class="header-top-phone__list-phone-item">
 							<div class="header-top-phone__list-phone-title">Оптовый отдел</div>
-							<div class="header-top-phone__list-phone-number">+38 (098) 281-64-52</div>
+							<a class="header-top-phone__list-phone-number" href="tel:+380982816452">+38 (098) 281-64-52</a>
 							<div class="header-top-phone__list-phone-work">пн-сб 10:00 - 19:00</div>
 						</div>
 						<div class="header-top-phone__list-phone-item">
 							<div class="header-top-phone__list-phone-title">Отдел рекламаций и претензий</div>
-							<div class="header-top-phone__list-phone-number">+38 (096) 350 76 92</div>
+							<a class="header-top-phone__list-phone-number" href="tel:+380963507692">+38 (096) 350 76 92</a>
 							<div class="header-top-phone__list-phone-work">пн-сб 10:00 до 19:00</div>
 						</div>
 					</div>
@@ -383,13 +383,15 @@
 
 					<!-- shopping-cart svg -->
 					<div class="header-center-navigation__item-card" tabindex="0">
-						<div class="header-center-navigation__item-svg">
-							<svg class="panel-icon-svg">
-								<use xlink:href="img/sprite.svg#shopping-cart"></use>
-							</svg>
-							<span class="header-center-navigation__card-quantity">0</span>
+						<div data-da=".shop-card-mobile,768,1" class="header-center-navigation__item-card-title">
+							<div class="header-center-navigation__item-svg">
+								<svg class="panel-icon-svg">
+									<use xlink:href="img/sprite.svg#shopping-cart"></use>
+								</svg>
+								<span class="header-center-navigation__card-quantity">0</span>
+							</div>
+							<div class="header-center-navigation__item-text">Корзина</div>
 						</div>
-						<div class="header-center-navigation__item-text">Корзина</div>
 
 						<div class="card-content">
 							<div class="card-content__header">
@@ -5552,7 +5554,7 @@
 		</div>
 
 		<div class="questions-body">
-			
+
 			<div class="questions-body__item">
 				<!-- <div class="questions-body__item-pointer"> -->
 				<div data-path="varanty" class="questions-body__item-title click-title">
@@ -5565,14 +5567,11 @@
 				</div>
 				<div data-target="varanty" class="questions-body__item-content click-content">
 					<p class="questions-body__item-content-paragraph">При покупке электросамоката у нас, вам
-						выдается
-						кассовый чек, товарный чек и гарантийный талон – эти документы дают право на гарантийное
-						обслуживание
-						на законодательном уровне.</p>
+						выдается кассовый чек, товарный чек и гарантийный талон – эти документы дают право на гарантийное
+						обслуживание на законодательном уровне.</p>
 					<p class="questions-body__item-content-paragraph">
 						Наши сервисные центры находятся в Москве, Санкт-Петербурге и Краснодаре. В случае поломки
-						вы можете
-						обратиться туда.
+						вы можете обратиться туда.
 					</p>
 					<p class="questions-body__item-content-paragraph">Если вы живете в городе, где нет нашего
 						сервисного
@@ -6236,7 +6235,7 @@
 				Оставьте свою почту и станьте первым, кто получит скидку на новые самокаты
 			</div>
 
-			<form class="belt-form">
+			<form action="#" class="belt-form" id="belt-form" name="form">
 				<input type="email" name="email" placeholder="Введите Ваш email" class="belt-form__input">
 				<button type="submit" class="belt-form__button">Подписаться</button>
 			</form>
@@ -6308,14 +6307,14 @@
 
 						<div class="footer-block__content">
 							<div class="footer-subtitle">Call-центр</div>
-							<div class="footer-phone">+38 (096)505-54-61</div>
+							<div class="footer-phone" type="tel:+380965055461">+38 (096) 505-54-61</div>
 							<div class="footer-day">Пн-Вс 10:00 - 20:00</div>
 						</div>
 
 						<div class="footer-block__content">
 							<div class="footer-block__adress-title">Магазин в Киеве
 								ул.Хрещатик 5</div>
-							<div class="footer-day">+38(096) 505-54-61</div>
+							<div class="footer-day" type="tel:+380965055461">+38 (096) 505-54-61</div>
 						</div>
 
 					</div>
@@ -6324,14 +6323,14 @@
 
 						<div class="footer-block__content">
 							<div class="footer-subtitle">Call-центр</div>
-							<div class="footer-phone">+38 (098)281-64-52</div>
+							<div class="footer-phone" type="tel:+380982816452">+38 (098) 281-64-52</div>
 							<div class="footer-day">Пн-Вс 10:00 - 20:00</div>
 						</div>
 
 						<div class="footer-block__body-content-block">
 							<div class="footer-block__content">
 								<div class="footer-block__adress-title">Магазин в Харькове ул.Фрунзе 2</div>
-								<div class="footer-day">+38 (098) 281-64-52</div>
+								<div class="footer-day" type="tel:+380982816452">+38 (098) 281-64-52</div>
 							</div>
 
 						</div>
@@ -6343,7 +6342,7 @@
 							<div class="footer-block__content">
 								<div class="footer-block__adress-title">Магазин в Хмельницком
 									ул.Окружная 86</div>
-								<div class="footer-day">+38 (096) 505-54-61</div>
+								<div class="footer-day" type="tel:+380965055461">+38 (096) 505-54-61</div>
 							</div>
 						</div>
 					</div>
@@ -6491,13 +6490,13 @@
 		</div>
 
 		<!-- home-icom -->
-		<div class="panel__item">
-			<a href="" class="panel__link panel-shopping-cart">
+		<div class="panel__item shop-card-mobile">
+			<!-- <a href="" class="panel__link panel-shopping-cart">
 				<svg class="panel-icon">
 					<use xlink:href="img/sprite.svg#shopping-cart"></use>
 				</svg>
 				<div class="panel__title">Корзина</div>
-			</a>
+			</a> -->
 		</div>
 
 		<!-- home-icom -->
@@ -6614,8 +6613,8 @@
 </section>
 	</div>
 
-	<script src=" https://unpkg.com/simplebar@latest/dist/simplebar.min.js?_v=20220702232904"></script>
-	<script src="js/app.min.js?_v=20220702232904"></script>
+	<script src=" https://unpkg.com/simplebar@latest/dist/simplebar.min.js?_v=20220706223115"></script>
+	<script src="js/app.min.js?_v=20220706223115"></script>
 </body>
 
 </html>
