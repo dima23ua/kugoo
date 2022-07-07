@@ -1893,13 +1893,13 @@ select {
   font-size: 18px;
   line-height: 145%;
   color: #282739;
-  margin-bottom: 20px;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
 .shop-card__content-data {
+  margin-top: 20px;
   margin-bottom: 25px;
   font-size: 14px;
 }
@@ -2876,8 +2876,21 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-height: 725px;
-  padding: 0 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.video__content {
+  width: 100%;
+  max-width: 1080px;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.video__file {
+  width: 100%;
+  background-size: cover;
 }
 
 .questions-body {
